@@ -1,0 +1,43 @@
+from flask import Flask,render_template,request,redirect,url_for,flash,jsonify
+from sqlalchemy import create_engine
+from  sqlalchemy.orm import sessionmaker
+from database import Base,Webdata
+engine =create_engine('sqlite:///info.db')
+Base.metadata.bind = engine
+DBsession =sessionmaker (bind=engine)
+session=DBsession()
+#data=Webdata(bank_name= "adasdf",personal="Intrest Rate:",home="dfdfs",educational="dfdfs",gold="dfdfs")
+data=Webdata(bank_name= "SBI",personal="Interest Rate:11.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-5 Years;",home="Interest Rate:8.65% - 8.70%;One time fee:0%;Amount:15L - 10;Tenure:1-30 Years;",educational="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-5 Years;",gold="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-5 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "CANARA BANK",personal="Interest Rate:12.7;One time fee:1,000 to ₹5,000;Amount:3L;Tenure:5 years;",home="Interest Rate:9.6% - 11.65%;One time fee:0.8%;Amount:55K - 15L;Tenure:1-3 Years;",educational="Intrest Rate:12.5% - 13.065%;One time fee:4%;Amount:45K - 12L;Tenure:1-5 Years;",gold="Intrest Rate:10.8% - 12.65%;One time fee:1%;Amount:40K - 150L;Tenure:1-3 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "BANK OF INDIA",personal="Interest Rate:11% - 12%;One time fee:2,000 to ₹9,000;Amount:13% - 14%;Tenure:1-5 years;",home="Intrest Rate:12.6% - 13.65%;One time fee:2%;Amount:40K - 150;Tenure:1-4 Years;",educational="Intrest Rate:11.6% - 12.95%;One time fee:2%;Amount:40K - 12L;Tenure:1-4 Years;",gold="Intrest Rate:10.6% - 12.65%;One time fee:1%;Amount:55K - 14L;Tenure:1-4 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "VIJAYA BANK",personal="Interest Rate:13% - 14%;One time fee:1,000 to ₹10,000;Amount:13% - 14%;Tenure:1-3 years;",home="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-4 Years;",educational="Intrest Rate:12.6% - 13.65%;One time fee:2%;Amount:20K - 15L;Tenure:1-4 Years;",gold="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:30K - 15L;Tenure:1-4 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "SBT",personal="Interest Rate:10.55% - 12.05%;One time fee:4%;Amount:15L Max;Tenure:1-5 Years;",home="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:25K - 15L;Tenure:1-3 Years;",educational="Intrest Rate:11.6% - 12.65%;One time fee:1%;Amount:50K - 10L;Tenure:1-5 Years;",gold="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:10K - 15L;Tenure:1-3 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "BANK OF BARODA",personal="Interest Rate:12.35% - 14.35%;One time fee:1,500 to ₹15,000;Amount:10K - 2L Max;Tenure:4 Years;",home="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-5 Years;",educational="Intrest Rate:10.6% - 12.02%;One time fee:2%;Amount:50K - 15L;Tenure:3 Years;",gold="Intrest Rate:9% - 11%;One time fee:1%;Amount:50K - 15L;Tenure:1-3 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "CENTRAL BANK",personal="Interest Rate:11.5%;One time fee:Rs.500;Amount:2L Max;Tenure:4 Years;",home="Intrest Rate:12.3% - 14.92%;One time fee:1%;Amount:20K - 15L;Tenure:1-3 Years;",educational="Intrest Rate:10.3% - 12.65%;One time fee:1%;Amount:50K - 18L;Tenure:1-4 Years;",gold="Intrest Rate:12.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-3 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "IDBI BANK",personal="Interest Rate:12.65% to 13.65%;One time fee:Rs.508 to 0.508%;Amount:50K Max;Tenure:3 Years;",home="Intrest Rate:11.6% - 12.65%;One time fee:5%;Amount:47K - 15L;Tenure:1-3 Years;",educational="Intrest Rate:12.6% - 13.65%;One time fee:1%;Amount:45K - 14L;Tenure:1-5 Years;",gold="Intrest Rate:12.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-5 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "YES BANK",personal="Interest Rate:14%;One time fee:Upto 2%;Amount:20L Max;Tenure:1-5 Years;",home="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-5 Years;",educational="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-5 Years;",gold="Intrest Rate:12.6% - 13.01%;One time fee:1%;Amount:50K - 15L;Tenure:1-5 Years;")
+session.add(data)
+session.commit()
+data=Webdata(bank_name= "UNION BANK",personal="Interest Rate:14.4%;One time fee:0.5%;Amount:5L Max;Tenure:1-5 Years;",home="Intrest Rate:11.6% - 12.35%;One time fee:1%;Amount:55K - 16L;Tenure:1-3 Years;",educational="Intrest Rate:9% - 13.65%;One time fee:5%;Amount:50K - 15L;Tenure:1-5 Years;",gold="Intrest Rate:11.6% - 13.65%;One time fee:1%;Amount:50K - 15L;Tenure:1-3 Years;")
+
+
+session.add(data)
+session.commit()
+#tempe=session.query(Webdata).filter_by(bank_name="adasdf").one()
+#print(tempe.bank_name)

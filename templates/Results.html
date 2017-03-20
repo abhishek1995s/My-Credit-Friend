@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+<style>
+#piechart{
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+</style>
+  
+  
+      
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+
+  
+</head>
+
+<body>
+<ul>
+  <li><a class="active" href="#home">Enter a review</a></li>
+</ul>
+
+<div class="container">
+  <div class="card" z-default=10 z-hover=30>
+    <p>{{query}}<p>
+      <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>{{info}}</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>The movie is great. The first half kept me hanging and waiting for more while the second half managed to deliver to my expectations. A must watch movie!</p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Positive</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>A dream within a dream within a dream. What a concept ! As complex as it was, the entertainment factor was not lost. The intricacies in the story kept me intrigued throughout the movie. Awesome experience watching thing this movie. </p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Positive</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>A total waste of money. I couldn't understand most of what was in the story which seems to have been the intention of the creators of this movie. Wouldn't recommend anyone without godly patience to watch this movie. Had a horrible time watching this one.</p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Negative</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>Usually I try to be careful with over hyping a film, or setting the expectations too high, as film geeks all are guilty for, however for Christopher Nolan's Inception, this really is not possible.This is possibly one of the only perfect films I have ever seen. It is absolutely confident in every way, something which is extremely refreshing</p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Positive</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>Inception has a lot of ideas and it doesn't do anything with them. The hype around this movie made me really expecta  lot of things out of it, but honestly, it didn't deliver. Disappointing movie.</p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Negative</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>Insipid- the pointless film.There is no plot, character or soul to this film. It's like having a beautiful building on the outside with no paint or decoration on the inside.There is no tension; you couldn't care less about any of the characters, why were they even motivated to do what they did.</p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Negative</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>Insulting.I want to stress the fact that the only complexity in this movie is trying to figure out how you can invest so much money in a script that continuously makes a fool of the average critic intelligent viewer! It is deliberately confusing in order to conceal its stupidity. Nothing that really matters is explained in the movie.
+</p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Negative</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>Inception - A benchmark in all cinema to come.A script that has been worked on for over a decade, Nolan's endeavours are inescapable in its pure complexity and brilliance - quite simply, one of the best film story lines audiences will have encountered in their lifetime. All this is supplemented superbly by the film's ensemble cast.</p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Positive</h5>
+        </div>
+    </div>
+  </div>
+  <div class="card" z-default=10 z-hover=30>
+  <p>Overrated.This movie is so predictable that it takes all of 10 minutes to figure it out. At that stage you know you're going to waste another 2 and a half hours watching the nonsense where people slip in and out of dreams in an attempt to fabricate a story where there was no story.</p>
+  <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4" id="pol">
+            <h5>Negative</h5>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+  <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </div>
+   <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Polarity', 'Number of reviews'],
+          ['Positive',     5],
+          ['Negative',      5]
+        ]);
+
+        var options = {
+          title: 'Overall Polarity'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+   
+   
+
+</body>
+</html>
